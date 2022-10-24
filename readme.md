@@ -1,0 +1,1 @@
+Essa é uma pasta com meu primeiro projeto em Python, uma calculadora.
