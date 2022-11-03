@@ -20,6 +20,7 @@ print('ln - logarítmo natural (base e)')
 print('neg - transformar o número em um número negativo')
 print('c - apagar')
 print('off - encerrar a operação')
+print(250*'=')
 
 
 num = str(input('digite um número:'))
@@ -46,7 +47,7 @@ if op == "+" :
     num1 = float(num1)
     num = float(num)
     resultado = num + num1
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "-":
     num1 = float(input('digite um número:'))
     if num == "pi":
@@ -68,7 +69,7 @@ elif op == "-":
     num1 = float(num1)
     num = float(num)
     resultado = num - num1
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "*":
     num1 = float(input('digite um número:'))
     if num == "pi":
@@ -90,7 +91,7 @@ elif op == "*":
     num = float(num)
     num1 = float(num1)
     resultado = num * num1
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "/":
     num1 = float(input('digite um número:'))
     if num == "pi":
@@ -112,7 +113,7 @@ elif op == "/":
     num1 = float(num1)
     num = float(num)
     resultado = num / num1
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "^":
     num1 = float(input('digite um número:'))
     if num == "pi":
@@ -134,7 +135,7 @@ elif op == "^":
     num1 = float(num1)
     num = float(num)
     resultado = math.pow(num, num1)
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "^^":
     if num == "pi":
         num = "0"
@@ -146,7 +147,7 @@ elif op == "^^":
         num = math.e
     num = float
     resultado = math.pow(num,2)
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "sen":
     if num == "pi":
         num = "0"
@@ -158,7 +159,7 @@ elif op == "sen":
         num = math.e
     num = float(num)
     resultado = math.sin(math.radians(num))
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "cos":
     if num == "pi":
         num = "0"
@@ -170,7 +171,7 @@ elif op == "cos":
         num = math.e
     num = float(num)
     resultado = math.cos(math.radians(num))
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "arcsen":
     if num == "pi":
         num = "0"
@@ -182,7 +183,7 @@ elif op == "arcsen":
         num = math.e
     num = float(num)
     resultado = math.asin(math.radians(num))
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "arccos":
     if num == "pi":
         num = "0"
@@ -194,7 +195,7 @@ elif op == "arccos":
         num = math.e
     num = float(num)
     resultado = math.acos(math.radians(num))
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "arctan":
     if num == "pi":
         num = "0"
@@ -206,7 +207,7 @@ elif op == "arctan":
         num = math.e
     num = float(num)
     resultado = math.atan(math.radians(num))
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "raiz":
     if num == "pi":
         num = "0"
@@ -218,7 +219,7 @@ elif op == "raiz":
         num = math.e
     num = float(num)
     resultado = math.sqrt(num)
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "log":
     if num == "pi":
         num = "0"
@@ -230,7 +231,7 @@ elif op == "log":
         num = math.e
     num = float(num)
     resultado = math.log10(num)
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "ln":
     if num == "pi":
         num = "0"
@@ -242,7 +243,7 @@ elif op == "ln":
         num = math.e
     num = float(num)
     resultado = math.log1p(num)
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "neg":
     if num == "pi":
         num = "0"
@@ -254,7 +255,7 @@ elif op == "neg":
         num = math.e
     num = float(num)
     resultado = num * (-1)
-    print(resultado)
+    print('{:.2f}'.format(resultado))
 elif op == "c":
     print('0')
     num = str(input('digite um número:'))
@@ -274,7 +275,7 @@ elif op != "+" and op != "-" and op != "*" and op != "/" and op != "c" and op !=
     print('erro')
 
 
-while op == "+" or op == "-" or op == "c" or op == "*" or op == "/" or op == "^" or op == "^^" or op == "sen" or op == "cos" or op == "tan" or op == "arcsen" or op == "arccos" or op == "arctan" or op == "raiz"  or op == "log" or op == "ln" or op == "neg" or op == "off":
+while op == "+" or op == "-" or op == "c" or op == "*" or op == "/" or op == "^" or op == "^^" or op == "sen" or op == "cos" or op == "tan" or op == "arcsen" or op == "arccos" or op == "arctan" or op == "raiz"  or op == "log" or op == "ln" or op == "neg":
     op = str(input('digite a operação:'))
     if op == "+":
         num=str(input('digite um número:'))
@@ -288,7 +289,7 @@ while op == "+" or op == "-" or op == "c" or op == "*" or op == "/" or op == "^"
             num = math.e
         num = float(num)
         resultado = resultado + num
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "-":
         num=str(input('digite um número:'))
         if num == "pi":
@@ -301,7 +302,7 @@ while op == "+" or op == "-" or op == "c" or op == "*" or op == "/" or op == "^"
             num = math.e
         num = float(num)
         resultado = resultado - num
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "*":
         num=str(input('digite um número:'))
         if num == "pi":
@@ -314,7 +315,7 @@ while op == "+" or op == "-" or op == "c" or op == "*" or op == "/" or op == "^"
             num = math.e
         num = float(num)
         resultado = resultado * num
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "/":
         num=str(input('digite um número:'))
         if num == "pi":
@@ -327,7 +328,7 @@ while op == "+" or op == "-" or op == "c" or op == "*" or op == "/" or op == "^"
             num = math.e
         num = float(num)
         resultado = resultado / num
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "^":
         num=str(input('digite um número:'))
         if num == "pi":
@@ -340,37 +341,37 @@ while op == "+" or op == "-" or op == "c" or op == "*" or op == "/" or op == "^"
             num = math.e
         num = float(num)
         resultado = math.pow(resultado, num)
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "^^":
         resultado = math.pow(resultado)
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "sen":
         resultado = math.sin(math.radians(resultado))
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "cos":
         resultado = math.cos(math.radians(resultado))
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "arcsen":
         resultado = math.asin(math.radians(resultado))
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "arccos":
         resultado = math.acos(math.radians(resultado))
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "arctan":
         resultado = math.atan(math.radians(resultado))
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "raiz":
         resultado = math.sqrt(resultado)
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "log":
         resultado = math.log10(resultado)
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "ln":
         resultado = math.log1p(resultado)
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "neg":
         resultado = resultado * (-1)
-        print(resultado)
+        print('{:.2f}'.format(resultado))
     elif op == "c":
         print('0')
         num = str(input('digite um número:'))
